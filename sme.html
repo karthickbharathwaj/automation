@@ -85,7 +85,7 @@
         <h2>A big business starts small.</h2>
         <br>
         <h4>So tell us about yourself</h4>
-          <form>
+          <form action="https://jsonplaceholder.typicode.com/posts" >
             <div class="form-group">
               <label for="exampleFormControlInput1">Email address</label>
               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -105,8 +105,9 @@
               <label for="exampleFormControlTextarea1">Write us about you!</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
+            <div id="started"><a onclick="this.form.submit()" class="btn-get-started ">Submit</a></div>
           </form>
-          <div id="started"><a href="#" class="btn-get-started ">Submit</a></div>
+         
           
        
       </div>
