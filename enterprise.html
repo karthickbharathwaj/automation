@@ -88,12 +88,13 @@
         <h6>Talk to us</h6>
           <form>
             <div class="form-group">
+              <input type="hidden" class="form-control" name="type" id="type" value="enterprise" >
               <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input type="email" class="form-control" id="e_email" name="e-email" placeholder="name@example.com">
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">What is your Service?</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="e_service" name="e_service">
                 <option>Business</option>
                 <option>IT & Internet</option>
                 <option>Food and Hospitality</option>
@@ -104,15 +105,15 @@
             
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Where should we help?</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="e_text" name="e_text" rows="3"></textarea>
             </div>
           </form>
-          <div id="started"><a href="#" class="btn-get-started ">Submit</a></div>
+          <div id="started"><button id="e_button" class="btn-get-started ">Submit</button></div>
           
        
       </div>
     </section>
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
@@ -180,7 +181,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -274,6 +275,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="enterprise.js">
+   
+  </script>
 
 </body>
 

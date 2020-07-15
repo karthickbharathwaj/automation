@@ -610,8 +610,9 @@ section {
 }
 
 .section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 700;
+  
   padding: 0;
   line-height: 1px;
   margin: 0 0 5px 0;
@@ -621,10 +622,18 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
+.section-title h2::before {
+  content: "";
+  width: 120px;
+  height: 3px;
+  display: inline-block;
+  background: #34db77;
+  margin: 4px 10px;
+}
 .section-title h2::after {
   content: "";
   width: 120px;
-  height: 1px;
+  height: 3px;
   display: inline-block;
   background: #34db77;
   margin: 4px 10px;
@@ -767,9 +776,10 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.png") center center no-repeat;
+  /* background: url("../img/carimage.png") center center no-repeat; */
   background-size: contain;
-  min-height: 300px;
+  height: 50%;
+  width: 50%;
 }
 
 .about .play-btn {
@@ -1491,7 +1501,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .php-email-form button {
   background: #34db77;
   border: 0;
   padding: 10px 30px;
@@ -1500,7 +1510,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .php-email-form button:hover {
   background: #34e5a6;
 }
 
@@ -1532,6 +1542,7 @@ section {
   transition: 0.5s;
   color: #fff;
   background: #4adf86;
+  border: #ffff;
 }
 /*--------------------------------------------------------------
 # Footer

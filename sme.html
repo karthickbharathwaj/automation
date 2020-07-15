@@ -85,14 +85,15 @@
         <h2>A big business starts small.</h2>
         <br>
         <h4>So tell us about yourself</h4>
-          <form action="https://jsonplaceholder.typicode.com/posts" >
+          <form id="smeform" >
             <div class="form-group">
               <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input type="hidden" class="form-control" name="type" id="type" value="sme" >
+              <input type="email" class="form-control" id="smeemail" name="smeemail" placeholder="name@example.com">
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">What is your Service?</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="smeservice" name="smeservice">
                 <option>Business</option>
                 <option>IT & Internet</option>
                 <option>Food and Hospitality</option>
@@ -103,16 +104,17 @@
             
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Write us about you!</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="smetext" name="smetext" rows="3"></textarea>
             </div>
-            <div id="started"><a onclick="this.form.submit()" class="btn-get-started ">Submit</a></div>
+            
+            <div id="started"><button id="smebutton" class="btn-get-started ">Submit</button></div>
           </form>
          
           
        
       </div>
     </section>
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
         <div class="container">
   
           <div class="section-title" data-aos="fade-up">
@@ -180,7 +182,7 @@
           </div>
   
         </div>
-      </section>
+      </section> -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -231,14 +233,14 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -274,7 +276,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="sme.js">
+    
+  </script>
 </body>
 
 </html>
