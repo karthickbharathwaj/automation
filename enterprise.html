@@ -86,27 +86,30 @@
         <br>
         <h4>We present you an automated application which is less ordinary!</h4>
         <h6>Talk to us</h6>
-          <form>
+          <form id="form1">
             <div class="form-group">
               <input type="hidden" class="form-control" name="type" id="type" value="enterprise" >
               <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="e_email" name="e-email" placeholder="name@example.com">
+              <input type="email" pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$" class="form-control" id="e_email" name="e-email" placeholder="name@example.com" required>
+              <div class="alertstyles" id="alertemail"></div>
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">What is your Service?</label>
-              <select class="form-control" id="e_service" name="e_service">
+              <select class="form-control" id="e_service" name="e_service" required>
                 <option>Business</option>
                 <option>IT & Internet</option>
                 <option>Food and Hospitality</option>
                 <option>Physical Labor with limited or easy-to-learn skills</option>
                 <option>Other</option>
               </select>
+              <div class="alertstyles" id="alertservice"></div>
             </div>
             
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Where should we help?</label>
-              <textarea class="form-control" id="e_text" name="e_text" rows="3"></textarea>
+              <textarea class="form-control" id="e_text" name="e_text" rows="3" required></textarea>
             </div>
+            <div class="alertstyles" id="alertorgan"></div>
           </form>
           <div id="started"><button id="e_button" class="btn-get-started ">Submit</button></div>
           
@@ -272,6 +275,8 @@
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

@@ -606,39 +606,37 @@ section {
 }
 
 .section-title {
-  padding-bottom: 40px;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .section-title h2 {
-  font-size: 36px;
-  font-weight: 700;
-  
-  padding: 0;
-  line-height: 1px;
-  margin: 0 0 5px 0;
-  letter-spacing: 2px;
+  font-size: 32px;
+  font-weight: bold;
   text-transform: uppercase;
-  color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
+  position: relative;
+  color: gray;
+}
+
+.section-title h2::before, .section-title h2::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background: #34db77;
+  display: inline-block;
 }
 
 .section-title h2::before {
-  content: "";
-  width: 120px;
-  height: 3px;
-  display: inline-block;
-  background: #34db77;
-  margin: 4px 10px;
-}
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 3px;
-  display: inline-block;
-  background: #34db77;
-  margin: 4px 10px;
+  margin: 0 15px 10px 0;
 }
 
+.section-title h2::after {
+  margin: 0 0 10px 15px;
+}
+
+.section-title p {
+  margin: 15px 0 0 0;
+}
 .section-title p {
   margin: 0;
   margin: 0;
@@ -1432,7 +1430,9 @@ section {
   width: 100%;
   background: #fff;
 }
-
+.alertstyles{
+  color:red;
+}
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
 }
