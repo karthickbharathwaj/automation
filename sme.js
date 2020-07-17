@@ -37,12 +37,13 @@ $(document).ready(function () {
                     $("input:not(input[type=submit]), textarea").val('');
                 },
                 error: function (xhr, textStatus, errorThrown) {
-                    swal({
-                        title: "Fill all the fields",
-                        type: "warning",
-                        text: errorThrown,
-                        confirmButtonColor: "#00B4B4"
-                     });
+                    // swal({
+                    //     title: "Fill all the fields",
+                    //     type: "warning",
+                    //     text: errorThrown,
+                    //     confirmButtonColor: "#00B4B4"
+                    //  });
+                    console.log("there is some error");
                 }
             });
        
