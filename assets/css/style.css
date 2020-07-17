@@ -618,13 +618,7 @@ section {
   color: gray;
 }
 
-.section-title h2::before, .section-title h2::after {
-  content: '';
-  width: 50px;
-  height: 2px;
-  background: #34db77;
-  display: inline-block;
-}
+
 
 .section-title h2::before {
   margin: 0 15px 10px 0;
