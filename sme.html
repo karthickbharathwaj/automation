@@ -85,36 +85,32 @@
         <h2>A big business starts small.</h2>
         <br>
         <h4>So tell us about yourself</h4>
-          <form id="smeform"name="form1" >
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Email address</label>
-              <input type="hidden" class="form-control" name="type" id="type" value="sme" >
-              
-              <input type="email" pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$" class="form-control" id="smeemail" name="smeemail" placeholder="name@example.com" required>
-             
-            </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">What is your Service?</label>
-              <select class="form-control" id="smeservice" name="smeservice" required>
-                <option>Business</option>
-                <option>IT & Internet</option>
-                <option>Food and Hospitality</option>
-                <option>Physical Labor with limited or easy-to-learn skills</option>
-                <option>Other</option>
-              </select>
-              
-            </div>
-            
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Write us about you!</label>
-              <textarea class="form-control" id="smetext" name="smetext" rows="3" required></textarea>
-             
-            </div>
-            
-            <div id="started"><button id="smebutton" class="btn-get-started ">Submit</button></div>
-          </form>
-         
+        <form id="form1">
+          <div class="form-group">
+            <input type="hidden" class="form-control" name="type" id="type" value="sme" >
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$" class="form-control" id="e_email" name="e-email" placeholder="name@example.com" required>
+            <div class="alertmsg"  id="alertemail"></div>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">What is your Service?</label>
+            <select class="form-control" id="e_service" name="e_service" required>
+              <option>Business</option>
+              <option>IT & Internet</option>
+              <option>Food and Hospitality</option>
+              <option>Physical Labor with limited or easy-to-learn skills</option>
+              <option>Other</option>
+            </select>
+            <div class="alertmsg" id="alertservice"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Where should we help?</label>
+            <textarea class="form-control" id="e_text" name="e_text" rows="3" required></textarea>
+          </div>
+          <div class="alertmsg" id="alerttext"></div>
+        </form>
+        <div id="started"><button id="e_button" class="btn-get-started ">Submit</button></div>
           
        
       </div>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Bootslander Bootstrap Template - Index</title>
+  <title>Low code Digital Garage</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -517,25 +517,55 @@
               </div>
               <div class="text-center"><button id="save">Send Message</button></div>
             </form> -->
+            <!-- past form
             <form name="form1" id="form1" class="php-email-form">
               <div class="form-group">
                 <label for="formGroupExampleInput">Name</label>
                 <input type="text" class="form-control" id="name" name="cname" placeholder="Your name" required>
+                <div id="alertname"></div><br />
               </div>
               <div class="form-group">
                 <label for="exampleFormControlInput1">Email address</label>
                 <input type="email"  pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$"  class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                <div id="alertemail"></div><br />
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <div id="alertsubject"></div><br />
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Message</label>
                 <input type="text" class="form-control" name="message" id="message" rows="5" placeholder="Your Message" required>
+                <div id="alertmessage"></div><br />
               </div>
               <div class="text-center"><button id="save">Send Message</button></div>
-            </form>
+            </form> -->
+            <form id="form1" name="form1" class="php-email-form">
+              <!-- <div class="form-group"> Name :- <input type="text" name="name" id="name" /><br /><div id="alertname"></div><br /></div> -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">Name</label>
+                <input type="text" name="name" id="name" class="form-control"  placeholder="Your name" required>
+                <div class="alertmsg" id="alertname"></div><br />
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Email</label>
+                <input class="form-control" type="email" name="email" id="email" />
+                <div class="alertmsg" id="alertemail"></div><br />
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Subject</label>
+                <input class="form-control" type="text" name="subject" id="subject" />
+                <div class="alertmsg" id="alertsubject"></div><br />
+              </div>
+               
+              <div class="form-group">
+                <label for="formGroupExampleInput"> Message </label>
+                <input type="text" class="form-control" name="message" id="message" />
+                <div class="alertmsg" id="alertmessage"></div><br />
+              </div>
+             <div class="text-center" id="started"><input  class="btn-get-started" type="button"   id="save" value="Send Message" /><br /></div> 
+          </form>
             <!-- <form id="smeform"name="form1" >
              
                 <div class="form-group">
