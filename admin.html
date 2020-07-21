@@ -1,35 +1,150 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="assets/css/signin.css">
-<!------ Include the above in your HEAD tag ---------->
+<html lang="en">
 
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
-        <h4>Admin Login</h4>
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .main-head {
+            height: 150px;
+            background: #FFF;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            background-color: #000;
+            overflow-x: hidden;
+            padding-top: 80px;
+        }
+
+        .main {
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .login-form {
+                margin-top: 10%;
+            }
+
+            .register-form {
+                margin-top: 10%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .main {
+                margin-left: 40%;
+            }
+
+            .sidenav {
+                width: 40%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+
+            .login-form {
+                margin-top: 80%;
+            }
+
+            .register-form {
+                margin-top: 20%;
+            }
+        }
+
+        .login-main-text {
+            margin-top: 20%;
+            padding: 60px;
+            color: #fff;
+        }
+
+        .login-main-text h2 {
+            font-weight: 300;
+        }
+
+        .btn-black {
+            background-color: #000 !important;
+            color: #fff;
+        }
+
+        .manualalert {
+            margin-top: 3px;
+            color: red;
+            font-size: small;
+            font-weight: 200;
+        }
+
+        .loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 999999;
+            opacity: 50%;
+            background-color: white;
+        }
+
+        .subloader {
+            position: relative;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+    <script src="admin.js">
+     
+    </script>
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h2>Admin<br> Login Page</h2>
+            <p>Login from here to access.</p>
+        </div>
     </div>
-
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <!-- <input type="submit" class="fadeIn fourth" value="Log In"> -->
-      
-      <a href="contact.html" class="btn-get-started ">Contact signin</a>
-      
-      
-      <a href="organization.html" class="btn-get-started ">organization signin</a>
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+    <div class="main">
+        <div class="col-md-5 col-sm-12">
+            <div class="login-form">
+                <form>
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" class="form-control" placeholder="User Name" id="username" name="username" />
+                        <div class="text-center manualalert" id="alertusername"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password" id="password"
+                            name="password" />
+                        <div class="text-center manualalert" id="alertpassword"></div>
+                    </div>
+                    <div id="loginstatus">
+                    </div>
+                    <div class="text-center" id="started">
+                        <input class="btn btn-black" type="button" id="save" value="Login" /></div>
+                </form>
+            </div>
+        </div>
     </div>
+    <div id="spinner">
+    </div>
+</body>
 
-  </div>
-</div>
+</html>

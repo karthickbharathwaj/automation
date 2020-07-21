@@ -20,18 +20,24 @@ $(function () {
     $('#dataTable').DataTable({
         "ajax": {
             "url": "https://morning-wildwood-74823.herokuapp.com/api/organization", /*Data source*/
-            "dataSrc": "data", /*object that holds the data*/
+            "beforeSend": function (xhr) {
+                xhr.setRequestHeader("x-auth-token", localStorage.getItem('token'));
+            },
+            "dataSrc": "data",/*object that holds the data*/
         },
         columns: [
             { data: 'type' },
             { data: 'email' },
             { data: 'service' },
             { data: 'about_organization' }
-            
         ],
         "columnDefs": [{ /* default values for columns */
             "defaultContent": "-",
             "targets": "_all"
         }],
     });
-});
+    $("#logout").click(function () {
+        localStorage.removeItem('token');
+        window.location.href = 'admin.html';
+    })
+}); 
