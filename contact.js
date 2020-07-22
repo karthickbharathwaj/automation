@@ -124,7 +124,8 @@ $(document).ready(function () {
             messageStatus = true;
         }
     })
-    $("#save").click(function () {
+    $("#save").click(function (e) {
+         event.preventDefault(e);
         if (!nameStatus) {
             var divname = $('#divname').closest('div');
             document.getElementById('alertname').innerHTML = "* Name should be filled out";

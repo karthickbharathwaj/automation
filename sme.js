@@ -40,8 +40,8 @@ $(document).ready(function () {
             textStatus = true;
         }
     })
-    $("#e_button").click(function () {
-        
+    $("#e_button").click(function (e) {
+        event.preventDefault(e);
         if (!emailStatus) {
             var divemail = $('#divemail').closest('div');
             document.getElementById('alertemail').innerHTML = "* Invalid Email";

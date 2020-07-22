@@ -6,6 +6,7 @@ $(document).ready(function () {
     var textStatus = false;
   
     $("#e_email").change(function (e) {
+        
         var tempemail = e.target.value;
         var divemail = $('#divemail').closest('div');
         if ((tempemail == "") || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(tempemail))) {
@@ -40,8 +41,8 @@ $(document).ready(function () {
             textStatus = true;
         }
     })
-    $("#e_button").click(function () {
-        
+    $("#e_button").click(function (e) {
+        event.preventDefault(e);
         if (!emailStatus) {
             var divemail = $('#divemail').closest('div');
             document.getElementById('alertemail').innerHTML = "* Invalid Email";
