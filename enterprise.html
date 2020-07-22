@@ -87,13 +87,13 @@
         <h4>We present you an automated application which is less ordinary!</h4>
         <h6>Talk to us</h6>
           <form id="form1">
-            <div class="form-group">
+            <div id="divemail" class="form-group  has-feedback">
               <input type="hidden" class="form-control" name="type" id="type" value="enterprise" >
               <label for="exampleFormControlInput1">Email address</label>
               <input type="email" pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$" class="form-control" id="e_email" name="e-email" placeholder="name@example.com" required>
               <div class="alertmsg"  id="alertemail"></div>
             </div>
-            <div class="form-group">
+            <div  class="form-group  has-feedback">
               <label for="exampleFormControlSelect1">What is your Service?</label>
               <select class="form-control" id="e_service" name="e_service" required>
                 <option>Business</option>
@@ -105,7 +105,7 @@
               <div class="alertmsg" id="alertservice"></div>
             </div>
             
-            <div class="form-group">
+            <div id="divservice" class="form-group  has-feedback">
               <label for="exampleFormControlTextarea1">Where should we help?</label>
               <textarea class="form-control" id="e_text" name="e_text" rows="3" required></textarea>
             </div>
@@ -260,6 +260,9 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>

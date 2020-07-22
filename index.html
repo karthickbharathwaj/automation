@@ -543,23 +543,23 @@
             </form> -->
             <form id="form1" name="form1" class="php-email-form">
               <!-- <div class="form-group"> Name :- <input type="text" name="name" id="name" /><br /><div id="alertname"></div><br /></div> -->
-              <div class="form-group">
+              <div id="divname" class="form-group  has-feedback">
                 <label for="formGroupExampleInput">Name</label>
                 <input type="text" name="name" id="name" class="form-control"  placeholder="Your name" required>
                 <div class="alertmsg" id="alertname"></div>
               </div>
-              <div class="form-group">
+              <div id="divemail" class="form-group  has-feedback">
                 <label for="formGroupExampleInput">Email</label>
                 <input class="form-control" type="email" name="email" id="email" />
                 <div class="alertmsg" id="alertemail"></div>
               </div>
-              <div class="form-group">
+              <div id="divsubject" class="form-group  has-feedback">
                 <label for="formGroupExampleInput">Subject</label>
                 <input class="form-control" type="text" name="subject" id="subject" />
                 <div class="alertmsg" id="alertsubject"></div>
               </div>
                
-              <div class="form-group">
+              <div id="divmessage" class="form-group  has-feedback">
                 <label for="formGroupExampleInput"> Message </label>
                 <textarea type="text" class="form-control" name="message" id="message" rows="5"></textarea>
                 <div class="alertmsg" id="alertmessage"></div>
@@ -676,6 +676,9 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
