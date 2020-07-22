@@ -12,8 +12,8 @@
   color: red;
 }
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+  font-family: "Open Sans", sans-serif !important;
+  color: #444444 !important;
 }
 
 a {
