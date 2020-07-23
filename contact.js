@@ -59,7 +59,7 @@ $(document).ready(function () {
         var divname = $('#divname').closest('div');
         console.log(e.target.value);
         if (tempname == "") {
-            document.getElementById('alertname').innerHTML = "* Name should be filled out";
+            document.getElementById('alertname').innerHTML = "* Please provide a name";
             $("span").remove('#snamespan');
               divname.addClass("has-error");
               divname.append('<span id="enamespan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
@@ -76,7 +76,7 @@ $(document).ready(function () {
         var tempemail = e.target.value;
         var divemail = $('#divemail').closest('div');
         if ((tempemail == "") || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(tempemail))) {
-            document.getElementById('alertemail').innerHTML = "* Invalid Email";
+            document.getElementById('alertemail').innerHTML = "* Please provide a properly formatted E-mail address";
             $("span").remove('#semailspan');
               divemail.addClass("has-error");
               divemail.append('<span id="eemailspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
@@ -94,7 +94,7 @@ $(document).ready(function () {
         var tempsubject = e.target.value;
         var divsubject = $('#divsubject').closest('div');
         if (tempsubject == "") {
-            document.getElementById('alertsubject').innerHTML = "* Subject should be filled out";
+            document.getElementById('alertsubject').innerHTML = "* Please provide your Subject";
             $("span").remove('#ssubjectspan');
               divsubject.addClass("has-error");
               divsubject.append('<span id="esubjectspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
@@ -111,7 +111,7 @@ $(document).ready(function () {
         var tempmessage = e.target.value;
         var divmessage = $('#divmessage').closest('div');
         if (tempmessage == "") {
-            document.getElementById('alertmessage').innerHTML = "* Message should be filled out";
+            document.getElementById('alertmessage').innerHTML = "* Please provide your Message";
             $("span").remove('#smessagespan');
               divmessage.addClass("has-error");
               divmessage.append('<span id="emessagespan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
@@ -128,28 +128,28 @@ $(document).ready(function () {
          event.preventDefault(e);
         if (!nameStatus) {
             var divname = $('#divname').closest('div');
-            document.getElementById('alertname').innerHTML = "* Name should be filled out";
+            document.getElementById('alertname').innerHTML = "* Please provide a Name";
             $("span").remove('#snamespan');
               divname.addClass("has-error");
               divname.append('<span id="enamespan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
         }
         if (!emailStatus) {
             var divemail = $('#divemail').closest('div');
-            document.getElementById('alertemail').innerHTML = "* Invalid Email";
+            document.getElementById('alertemail').innerHTML = "* Please enter your E-mail address";
             $("span").remove('#semailspan');
               divemail.addClass("has-error");
               divemail.append('<span id="eemailspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
         }
         if (!subjectStatus) {
             var divsubject = $('#divsubject').closest('div');
-            document.getElementById('alertsubject').innerHTML = "* Subject should be filled out";
+            document.getElementById('alertsubject').innerHTML = "* Please enter your Subject";
             $("span").remove('#ssubjectspan');
               divsubject.addClass("has-error");
               divsubject.append('<span id="esubjectspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
         }
         if (!messageStatus) {
             var divmessage = $('#divmessage').closest('div');
-            document.getElementById('alertmessage').innerHTML = "* Message should be filled out";
+            document.getElementById('alertmessage').innerHTML = "* Please enter your Message";
             $("span").remove('#smessagespan');
             divmessage.addClass("has-error");
             divmessage.append('<span id="emessagespan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')

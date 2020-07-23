@@ -9,7 +9,7 @@ $(document).ready(function () {
         var tempemail = e.target.value;
         var divemail = $('#divemail').closest('div');
         if ((tempemail == "") || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(tempemail))) {
-            document.getElementById('alertemail').innerHTML = "* Invalid Email";
+            document.getElementById('alertemail').innerHTML = "* Please provide a properly formatted E-mail address";
             $("span").remove('#semailspan');
               divemail.addClass("has-error");
               divemail.append('<span id="eemailspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
@@ -27,7 +27,7 @@ $(document).ready(function () {
         var tempmessage = e.target.value;
         var divservice = $('#divservice').closest('div');
         if (tempmessage == "") {
-            document.getElementById('alerttext').innerHTML = "* This field should be filled out";
+            document.getElementById('alerttext').innerHTML = "* Please provide your Message here";
             $("span").remove('#ssubjectspan');
               divservice.addClass("has-error");
               divservice.append('<span id="esubjectspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
@@ -44,7 +44,7 @@ $(document).ready(function () {
         event.preventDefault(e);
         if (!emailStatus) {
             var divemail = $('#divemail').closest('div');
-            document.getElementById('alertemail').innerHTML = "* Invalid Email";
+            document.getElementById('alertemail').innerHTML = "* Please provide your e-mail address";
             $("span").remove('#semailspan');
               divemail.addClass("has-error");
               divemail.append('<span id="eemailspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
@@ -52,7 +52,7 @@ $(document).ready(function () {
        
         if (!textStatus) {
             var divservice = $('#divservice').closest('div');
-            document.getElementById('alerttext').innerHTML = "* This field should be filled out";
+            document.getElementById('alerttext').innerHTML = "* Please provide your Message here";
             $("span").remove('#ssubjectspan');
             divservice.addClass("has-error");
             divservice.append('<span id="esubjectspan" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>')
